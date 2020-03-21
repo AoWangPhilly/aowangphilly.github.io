@@ -1,0 +1,37 @@
+#header {
+    color: lightgray;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+#terminal {
+    align-content: center;
+    width: 50rem;
+    height: 100%;
+    background-color: black;
+}
+
+#terminal-content {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid;
+}
+
+p {
+    color: azure;
+}
+
+#terminal-content b {
+    color: #9CAEA9;
+}
+
+.home {
+    color: darksalmon;
+}
+
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
