@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #container {
     display: flex;
     justify-content: center;
@@ -5,7 +10,6 @@
 }
 
 #terminal-content p {
-
     font-family: 'Montserrat', sans-serif;
     padding-left: 1rem;
     font-size: 0.8rem;
@@ -23,12 +27,12 @@ hr {
 }
 
 h1 {
-    font-weight: lighter;
+    font-weight: bolder;
 }
 
 h2 {
-    font-weight: lighter;
     color: lightgrey;
+    font-weight: bolder;
 }
 
 #window-bar p {
@@ -95,6 +99,53 @@ a {
     text-align: center;
     font-size: 0.9rem;
 }
+
+/*Navigation Bar:*/
+.navbar {
+    position: fixed;
+    width: 5rem;
+    height: 100vh;
+    background: black;
+    transition: width 600ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-items {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.navbar:hover {
+    width: 10rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+i {
+    font-size: 30px;
+}
+
 
 /*Blinking cursor: https://codepen.io/ArtemGordinsky/pen/GnLBq*/
 .blinking-cursor {
