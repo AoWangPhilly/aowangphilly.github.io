@@ -1,5 +1,11 @@
 p {
     padding: 0 0 0 1rem;
+    font-size: 0.9rem;
+    line-height: 0.5;
+}
+
+hr {
+    border-color: grey;
 }
 
 #header {
@@ -10,14 +16,15 @@ p {
 
 
 #window-bar {
-    padding: 2rem 0 0 0;
+    padding: 0.001rem 0 0 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 #terminal {
     margin: 0 auto;
-    width: 50rem;
-    height: 38rem;
+    width: 40rem;
+    height: 28rem;
     background-color: black;
     border-radius: 1rem;
 }
@@ -43,4 +50,78 @@ p {
     bottom: 0px;
     width: 100%;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+/*The blinking cursor*/
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0 0 0 1rem;
+    color: black;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-moz-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-webkit-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: white;
+    }
+}
+
+@-ms-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-o-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
 }
