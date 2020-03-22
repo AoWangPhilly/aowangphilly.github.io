@@ -63,10 +63,11 @@ h2 {
 }
 
 p,
-a {
+#terminal-content a {
     color: white;
 }
 
+/*The button display*/
 .btn {
     margin-top: 0.5rem;
     margin-left: 0.5rem;
@@ -101,11 +102,19 @@ a {
 }
 
 /*Navigation Bar:*/
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
 .navbar {
     position: fixed;
-    width: 5rem;
-    height: 100vh;
-    background: black;
+    background-color: black;
     transition: width 600ms ease;
 }
 
@@ -119,7 +128,7 @@ a {
     height: 100%;
 }
 
-.nav-items {
+.nav-item {
     width: 100%;
 }
 
@@ -127,30 +136,66 @@ a {
     display: flex;
     align-items: center;
     height: 5rem;
+    color: var(--text-primary);
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
 }
 
 .link-text {
     display: none;
-    margin-left: 1rem;
-}
-
-.navbar:hover {
-    width: 10rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
+    margin-right: 5rem;
 }
 
 i {
-    font-size: 30px;
+    margin: 0 auto;
 }
 
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+}
 
 /*Blinking cursor: https://codepen.io/ArtemGordinsky/pen/GnLBq*/
 .blinking-cursor {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 0 0 0 1rem;
     color: black;
     -webkit-animation: 1s blink step-end infinite;
