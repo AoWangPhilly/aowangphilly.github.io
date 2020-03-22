@@ -1,3 +1,7 @@
+p {
+    padding: 0 0 0 1rem;
+}
+
 #header {
     color: lightgray;
     font-family: 'Open Sans', sans-serif;
@@ -6,9 +10,8 @@
 
 
 #window-bar {
-    padding: 30px 0 0 0;
+    padding: 2rem 0 0 0;
     box-sizing: border-box;
-    border-radius: 20px;
 }
 
 #terminal {
@@ -16,7 +19,7 @@
     width: 50rem;
     height: 38rem;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 
 #terminal-content {
