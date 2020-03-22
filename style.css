@@ -6,8 +6,8 @@
 
 #terminal-content p {
     font-family: 'Montserrat', sans-serif;
-    padding: 0 0 0 1rem;
-    font-size: 0.9rem;
+    padding-left: 1rem;
+    font-size: 0.8rem;
     line-height: 0.5;
 }
 
@@ -17,8 +17,17 @@ hr {
 
 #header {
     padding: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+h2 {
+    font-weight: lighter;
+    color: lightgrey;
 }
 
 
@@ -30,22 +39,28 @@ hr {
 
 #terminal {
     margin: 0 auto;
-    width: 40rem;
-    height: 28rem;
+    width: 60%;
+    height: 40%;
     background-color: black;
     border-radius: 0.5rem;
 }
 
-p {
-    color: azure;
+#terminal-content b {
+    color: #a7858f;
 }
 
-#terminal-content b {
-    color: #9CAEA9;
+.content {
+    color: #324a5e;
+    font-weight: bold;
 }
 
 .home {
-    color: darksalmon;
+    color: #bf2027;
+}
+
+p,
+a {
+    color: white;
 }
 
 .btn {
@@ -70,6 +85,7 @@ p {
 }
 
 #footer {
+    color: #d0cfcf;
     position: absolute;
     bottom: 0px;
     width: 100%;
