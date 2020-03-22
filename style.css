@@ -5,6 +5,7 @@
 }
 
 #terminal-content p {
+
     font-family: 'Montserrat', sans-serif;
     padding-left: 1rem;
     font-size: 0.8rem;
@@ -29,7 +30,6 @@ h2 {
     font-weight: lighter;
     color: lightgrey;
 }
-
 
 #window-bar p {
     display: inline;
@@ -87,6 +87,8 @@ a {
 #footer {
     font-family: 'Josefin Sans', sans-serif;
     color: #d0cfcf;
+    padding-top: 15rem;
+    padding-bottom: 1rem;
     position: absolute;
     bottom: 0px;
     width: 100%;
