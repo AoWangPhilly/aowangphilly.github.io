@@ -1,4 +1,5 @@
-p {
+#terminal-content p {
+    font-family: 'Montserrat', sans-serif;
     padding: 0 0 0 1rem;
     font-size: 0.9rem;
     line-height: 0.5;
@@ -9,16 +10,16 @@ hr {
 }
 
 #header {
-    color: lightgray;
+    padding: 2rem;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 
 
-#window-bar {
-    padding: 0.001rem 0 0 0;
-    box-sizing: border-box;
-    text-align: center;
+#window-bar p {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 34%;
 }
 
 #terminal {
@@ -26,11 +27,7 @@ hr {
     width: 40rem;
     height: 28rem;
     background-color: black;
-    border-radius: 1rem;
-}
-
-#terminal-content {
-    font-family: 'Montserrat', sans-serif;
+    border-radius: 0.5rem;
 }
 
 p {
@@ -45,6 +42,27 @@ p {
     color: darksalmon;
 }
 
+.btn {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close {
+    background-color: #de5246;
+}
+
+.minimize {
+    background-color: #ffce44;
+}
+
+.maximize {
+    background-color: #1aa260;
+}
+
 #footer {
     position: absolute;
     bottom: 0px;
@@ -53,10 +71,10 @@ p {
     font-size: 0.9rem;
 }
 
-/*The blinking cursor*/
+/*Blinking cursor: https://codepen.io/ArtemGordinsky/pen/GnLBq*/
 .blinking-cursor {
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0 0 0 1rem;
     color: black;
     -webkit-animation: 1s blink step-end infinite;
