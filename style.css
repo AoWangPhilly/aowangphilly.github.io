@@ -39,8 +39,8 @@ h2 {
 
 #terminal {
     margin: 0 auto;
-    width: 60%;
-    height: 40%;
+    width: 40rem;
+    height: 25rem;
     background-color: black;
     border-radius: 0.5rem;
 }
@@ -85,6 +85,7 @@ a {
 }
 
 #footer {
+    font-family: 'Josefin Sans', sans-serif;
     color: #d0cfcf;
     position: absolute;
     bottom: 0px;
