@@ -1,3 +1,9 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #terminal-content p {
     font-family: 'Montserrat', sans-serif;
     padding: 0 0 0 1rem;
