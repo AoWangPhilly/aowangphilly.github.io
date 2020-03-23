@@ -26,13 +26,8 @@ hr {
     text-align: center;
 }
 
-h1 {
-    font-weight: bolder;
-}
-
 h2 {
     color: lightgrey;
-    font-weight: bolder;
 }
 
 #window-bar > span > p {
