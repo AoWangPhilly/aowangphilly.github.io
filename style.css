@@ -35,10 +35,10 @@ h2 {
     font-weight: bolder;
 }
 
-#window-bar p {
+#window-bar > span > p {
     display: inline;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 34%;
+    margin-left: 33%;
 }
 
 #terminal {
@@ -91,7 +91,7 @@ p,
 
 #footer {
     font-family: 'Josefin Sans', sans-serif;
-    color: #d0cfcf;
+    color: lightgray;
     padding-top: 15rem;
     padding-bottom: 1rem;
     position: absolute;
