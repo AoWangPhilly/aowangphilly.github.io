@@ -11,7 +11,7 @@ function setup() {
     canvas.style("z-index", "-1");
     background(0);
     let x = 0;
-    let y = round(random(-500, 0));
+    let y = round(random(-1000, 0));
     for (let i = 0; i < (windowWidth / symbolSize) + 1; i++) {
         let stream = new Stream();
         stream.generateSymbols(x, y);
