@@ -1,3 +1,10 @@
+/**
+ * 
+ * 
+ */
+
+"use strict";
+
 let streams = [];
 let symbolSize = 25;
 
@@ -23,7 +30,8 @@ function setup() {
 }
 
 function draw() {
-    background(0, 128);
+    let opacity = 100;
+    background(0, opacity);
     streams.forEach(stream => {
         stream.render();
     });
@@ -58,8 +66,8 @@ Matrix.prototype = {
 // Stream class
 function Stream() {
     this.symbols = [];
-    this.totalSymbols = round(random(5, 30));
-    this.spd = round(random(5, 10));
+    this.totalSymbols = round(random(5, 15));
+    this.spd = round(random(1, 10));
 }
 
 Stream.prototype = {
