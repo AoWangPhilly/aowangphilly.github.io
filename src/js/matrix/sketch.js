@@ -1,37 +1,41 @@
 let streams = [];
-let symbolSize = 20;
+let symbolSize = 25;
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0, 0);
+    canvas.style("z-index", "-1");
     background(0);
     let x = 0;
-    let y = 0;
+    let y = round(random(-500, 0));
     for (let i = 0; i < (windowWidth / symbolSize) + 1; i++) {
         let stream = new Stream();
         stream.generateSymbols(x, y);
         streams.push(stream);
         x += symbolSize;
     }
+    textFont('Consolas');
     textSize(symbolSize);
 }
 
 function draw() {
-    background(0);
+    background(0, 128);
     streams.forEach(stream => {
         stream.render();
     });
 }
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-    background(0);
-}
 
 // Symbol class
-function Matrix(x, y, spd) {
+function Matrix(x, y, spd, initial) {
     this.x = x;
     this.y = y;
     this.spd = spd;
+    this.initial = initial;
     this.value;
     this.switchInterval = round(random(2, 20));
 }
@@ -61,16 +65,22 @@ function Stream() {
 Stream.prototype = {
     constructor: Stream,
     generateSymbols: function (x, y) {
+        let initial = round(random(5)) == 1;
         for (let i = 0; i < this.totalSymbols + 1; i++) {
-            let symbol = new Matrix(x, y, this.spd);
+            let symbol = new Matrix(x, y, this.spd, initial);
             symbol.setToRandomSymbol();
             this.symbols.push(symbol);
             y -= symbolSize;
+            initial = false;
         }
     },
     render: function () {
         this.symbols.forEach(symbol => {
-            fill(0, 255, 70);
+            if (symbol.initial) {
+                fill(180, 255, 180);
+            } else {
+                fill(0, 255, 70);
+            }
             text(symbol.value, symbol.x, symbol.y);
             symbol.rain();
             symbol.setToRandomSymbol();
